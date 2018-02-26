@@ -1,71 +1,64 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-
-plt.figure(2)
+plt.figure(1)
 a, b, c, d = np.loadtxt("C:/Users/asalo/Desktop/Lab 4 - sheet5.csv", delimiter=',', unpack= True, skiprows= 1)
 plt.plot(a, b)
 plt.plot(a, c)
 plt.plot(a, d)
+axes = plt.gca()
+axes.set_xlim(15000, 45000)
+axes.set_ylim(-40, 0)
+
+plt.figure(2)
+plt.title('Series')
+ax, ay = np.loadtxt("C:/Users/asalo/Downloads/Lab 4 - Voltage cap.csv", delimiter=',', unpack= True, skiprows= 1)
+bx, by = np.loadtxt("C:/Users/asalo/Downloads/Lab 4 - phase cap.csv", delimiter=',', unpack= True, skiprows= 1)
+cx, cy = np.loadtxt("C:/Users/asalo/Downloads/Lab 4 - Voltage Cap Para.csv", delimiter=',', unpack= True, skiprows= 1)
+dx, dy = np.loadtxt("C:/Users/asalo/Downloads/Lab 4 - phase Cap Para.csv", delimiter=',', unpack= True, skiprows= 1)
+plt.plot(ax, ay, label='Voltage')
+plt.plot(bx, by, label='Phase')
+plt.legend()
+axes = plt.gca()
+axes.set_xlim(0, 20000)
 
 plt.figure(3)
-x, y = np.loadtxt("C:/Users/asalo/Downloads/Lab 4 - Voltage cap.csv", delimiter=',', unpack= True, skiprows= 1)
-plt.plot(x, y)
+plt.title('Parallel')
+plt.plot(cx, cy, label='Voltage')
+plt.plot(dx, dy, label='Phase')
+plt.legend()
+axes = plt.gca()
+axes.set_xlim(0, 45000)
+
+
+x0, y0 = np.loadtxt("C:/Users/asalo/Downloads/Lab5/tek0026CH1.csv", delimiter=',', unpack= True, skiprows= 21)
+x1, y1 = np.loadtxt("C:/Users/asalo/Downloads/Lab5/tek0027CH1.csv", delimiter=',', unpack= True, skiprows= 21)
+x2, y2 = np.loadtxt("C:/Users/asalo/Downloads/Lab5/tek0028CH1.csv", delimiter=',', unpack= True, skiprows= 21)
+x3, y3 = np.loadtxt("C:/Users/asalo/Downloads/Lab5/tek0029CH1.csv", delimiter=',', unpack= True, skiprows= 21)
+x4, y4 = np.loadtxt("C:/Users/asalo/Downloads/Lab5/tek0030CH1.csv", delimiter=',', unpack= True, skiprows= 21)
+x5, y5 = np.loadtxt("C:/Users/asalo/Downloads/Lab5/tek0031CH1.csv", delimiter=',', unpack= True, skiprows= 21)
+x6, y6 = np.loadtxt("C:/Users/asalo/Downloads/Lab5/tek0032CH1.csv", delimiter=',', unpack= True, skiprows= 21)
+x7, y7 = np.loadtxt("C:/Users/asalo/Downloads/Lab5/tek0033CH1.csv", delimiter=',', unpack= True, skiprows= 21)
+x8, y8 = np.loadtxt("C:/Users/asalo/Downloads/Lab5/tek0034CH1.csv", delimiter=',', unpack= True, skiprows= 21)
+x9, y9 = np.loadtxt("C:/Users/asalo/Downloads/Lab5/tek0035CH2.csv", delimiter=',', unpack= True, skiprows= 21)
+x10, y10 = np.loadtxt("C:/Users/asalo/Downloads/Lab5/tek0036CH2.csv", delimiter=',', unpack= True, skiprows= 21)
+
 
 plt.figure(4)
-x, y = np.loadtxt("C:/Users/asalo/Downloads/Lab 4 - phase cap.csv", delimiter=',', unpack= True, skiprows= 1)
-plt.plot(x, y)
+plt.plot(x0, y0)
+plt.plot(x1, y1)
+plt.plot(x2, y2)
+axes = plt.gca()
+axes.set_xlim(-.00025, .00025)
 
-plt.figure(5)
-x, y = np.loadtxt("C:/Users/asalo/Downloads/Lab 4 - Voltage Cap Para.csv", delimiter=',', unpack= True, skiprows= 1)
-plt.plot(x, y)
-
-plt.figure(6)
-x, y = np.loadtxt("C:/Users/asalo/Downloads/Lab 4 - phase Cap Para.csv", delimiter=',', unpack= True, skiprows= 1)
-plt.plot(x, y)
-
-plt.figure(26)
-x, y = np.loadtxt("C:/Users/asalo/Downloads/Lab5/tek0026CH1.csv", delimiter=',', unpack= True, skiprows= 21)
-plt.plot(x, y)
-
-plt.figure(27)
-x, y = np.loadtxt("C:/Users/asalo/Downloads/Lab5/tek0027CH1.csv", delimiter=',', unpack= True, skiprows= 21)
-plt.plot(x, y)
-
-plt.figure(28)
-x, y = np.loadtxt("C:/Users/asalo/Downloads/Lab5/tek0028CH1.csv", delimiter=',', unpack= True, skiprows= 21)
-plt.plot(x, y)
-
-plt.figure(29)
-x, y = np.loadtxt("C:/Users/asalo/Downloads/Lab5/tek0029CH1.csv", delimiter=',', unpack= True, skiprows= 21)
-plt.plot(x, y)
-
-plt.figure(30)
-x, y = np.loadtxt("C:/Users/asalo/Downloads/Lab5/tek0030CH1.csv", delimiter=',', unpack= True, skiprows= 21)
-plt.plot(x, y)
-
-plt.figure(31)
-x, y = np.loadtxt("C:/Users/asalo/Downloads/Lab5/tek0031CH1.csv", delimiter=',', unpack= True, skiprows= 21)
-plt.plot(x, y)
-
-plt.figure(32)
-x, y = np.loadtxt("C:/Users/asalo/Downloads/Lab5/tek0032CH1.csv", delimiter=',', unpack= True, skiprows= 21)
-plt.plot(x, y)
-
-plt.figure(33)
-x, y = np.loadtxt("C:/Users/asalo/Downloads/Lab5/tek0033CH1.csv", delimiter=',', unpack= True, skiprows= 21)
-plt.plot(x, y)
-
-plt.figure(34)
-x, y = np.loadtxt("C:/Users/asalo/Downloads/Lab5/tek0034CH1.csv", delimiter=',', unpack= True, skiprows= 21)
-plt.plot(x, y)
-
-plt.figure(35)
-x, y = np.loadtxt("C:/Users/asalo/Downloads/Lab5/tek0035CH2.csv", delimiter=',', unpack= True, skiprows= 21)
-plt.plot(x, y)
-
-plt.figure(36)
-x, y = np.loadtxt("C:/Users/asalo/Downloads/Lab5/tek0036CH2.csv", delimiter=',', unpack= True, skiprows= 21)
-plt.plot(x, y)
+f, axarr = plt.subplots(8, sharex=True)
+axarr[0].plot(x3, y3)
+axarr[1].plot(x4, y4)
+axarr[2].plot(x5, y5)
+axarr[3].plot(x6, y6)
+axarr[4].plot(x7, y7)
+axarr[5].plot(x8, y8)
+axarr[6].plot(x9, y9)
+axarr[7].plot(x10, y10)
 
 plt.show()
