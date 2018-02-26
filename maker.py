@@ -3,12 +3,14 @@ import matplotlib.pyplot as plt
 
 plt.figure(1)
 a, b, c, d = np.loadtxt("input/Lab 4 - sheet5.csv", delimiter=',', unpack= True, skiprows= 1)
-plt.plot(a, b)
-plt.plot(a, c)
-plt.plot(a, d)
+plt.plot(a, b, label='R = 1850')
+plt.plot(a, c, label='R = 3700')
+plt.plot(a, d, label='R = 7400')
 axes = plt.gca()
 axes.set_xlim(15000, 45000)
 axes.set_ylim(-40, 0)
+plt.legend()
+plt.savefig("output/different rs.png")
 
 plt.figure(2)
 plt.title('Series')
@@ -21,6 +23,7 @@ plt.plot(bx, by, label='Phase')
 plt.legend()
 axes = plt.gca()
 axes.set_xlim(0, 20000)
+plt.savefig("output/series.png")
 
 plt.figure(3)
 plt.title('Parallel')
@@ -29,6 +32,7 @@ plt.plot(dx, dy, label='Phase')
 plt.legend()
 axes = plt.gca()
 axes.set_xlim(0, 45000)
+plt.savefig("output/parallel.png")
 
 
 x0, y0 = np.loadtxt("input/tek0026CH1.csv", delimiter=',', unpack= True, skiprows= 21)
