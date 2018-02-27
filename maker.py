@@ -10,18 +10,15 @@ def find_max(array1, array2):
             maxi = i
     print('Max= ', max)
     print('f= ', array2[maxi])
+    # to find the 3dB BW
     for j in range(0, maxi):
         if array1[j] < max - 3:
             lower = array1[j]
             loweri= j
-    # print(lower)
-    # print(array2[loweri])
-    for l in range(maxi, len(array1) -1):
+    for l in range(maxi, len(array1) - 1):
         if array1[l] > max - 3:
             upper = array1[l]
             upperi = l
-    # print(upper)
-    # print(array2[upperi])
     print('BW =', array2[upperi] - array2[loweri])
 
 
