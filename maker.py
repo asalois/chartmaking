@@ -118,6 +118,4 @@ plt.legend()
 axes = plt.gca()
 axes.set_xlim(0, 60000)
 plt.savefig("output/phaserspara.png")
-
-
 plt.show()
