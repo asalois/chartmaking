@@ -1,3 +1,7 @@
+# a program to help to make graphs for data from csv or text files
+# by Alex Salois Feb 2018
+
+
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -30,6 +34,7 @@ x0, y0 = np.loadtxt('input/LAB4Stuff - MagnitudePlotParallelBW20000.csv', delimi
 x1, y1 = np.loadtxt('input/LAB4Stuff - PhasePlotParallelBW20000.csv', delimiter=',', unpack=True, skiprows=3, usecols=(1, 2))
 x2, y2 = np.loadtxt('input/LAB4Stuff - PhasePlotParallelBW5000.csv', delimiter=',', unpack=True, skiprows=3, usecols=(1, 2))
 x3, y3 = np.loadtxt('input/LAB4Stuff - MagnitudePlotParallelBW5000.csv', delimiter=',', unpack=True, skiprows=3, usecols=(1, 2))
+
 
 plt.plot(a, b, label='R = 1850')
 plt.plot(a, c, label='R = 3700')
