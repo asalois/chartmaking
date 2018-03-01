@@ -94,18 +94,6 @@ axes = plt.gca()
 axes.set_xlim(0, 25000)
 plt.savefig("output/phasers.png")
 
-plt.figure(5)
-plt.plot(cx, cy, label='R = ')
-plt.plot(x0, y0, label='R = ')
-plt.plot(x3, y3, label='R = ')
-plt.xlabel('Frequency')
-plt.ylabel('dB Voltage')
-plt.legend()
-axes = plt.gca()
-axes.set_xlim(10000, 60000)
-axes.set_ylim(-40, 0)
-plt.savefig("output/voltagepara.png")
-
 
 plt.figure(6)
 plt.title('Phase change R')
